@@ -6,19 +6,13 @@ namespace Darker.Common.Tests
     [TestFixture]
     internal class UtcDateServiceTests
     {
-        private UtcDateService _service;
-
         [SetUp]
         public void SetUp()
         {
             _service = UtcDateService.Instance;
         }
 
-        [Test]
-        public void SingletonIsSameInstance()
-        {
-            Assert.AreEqual(UtcDateService.Instance,_service);
-        }
+        private UtcDateService _service;
 
         [Test]
         public void CurrentDateIsUtcNow()
@@ -33,5 +27,10 @@ namespace Darker.Common.Tests
             Assert.IsTrue(difference.Seconds < 10);
         }
 
+        [Test]
+        public void SingletonIsSameInstance()
+        {
+            Assert.AreEqual(UtcDateService.Instance, _service);
+        }
     }
 }

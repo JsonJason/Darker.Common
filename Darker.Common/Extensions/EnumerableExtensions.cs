@@ -35,7 +35,7 @@ namespace Darker
         }
 
         /// <summary>
-        /// Filters an Enumerable collection by the class or interface subtype
+        ///     Filters an Enumerable collection by the class or interface subtype
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <typeparam name="TFilter">The type of the t filter.</typeparam>
@@ -49,12 +49,12 @@ namespace Darker
         }
 
         /// <summary>
-        /// Filters an Enumerable collection by the class or interface subtype
+        ///     Filters an Enumerable collection by the class or interface subtype
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="filterType"></param>
         /// <returns>IEnumerable of the filtered type</returns>
-        public static IEnumerable<T> FilterByType<T>(this IEnumerable<T> source,Type filterType)
+        public static IEnumerable<T> FilterByType<T>(this IEnumerable<T> source, Type filterType)
             where T : class
         {
             return source.Where(item => item.GetType() == filterType);
@@ -81,6 +81,5 @@ namespace Darker
         {
             return source.Aggregate((x, y) => score(x).CompareTo(score(y)) < 0 ? x : y);
         }
-
     }
 }
