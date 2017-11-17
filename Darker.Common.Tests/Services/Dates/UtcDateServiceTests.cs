@@ -30,7 +30,7 @@ namespace Darker.Common.Tests.Services.Dates
         public void CurrentTimeIsUtcNow()
         {
             var difference = DateTime.UtcNow - _service.CurrentTime;
-            Assert.IsTrue(difference.Seconds < 1);
+            Assert.IsTrue(difference.Seconds < 10);
         }
 
     }
