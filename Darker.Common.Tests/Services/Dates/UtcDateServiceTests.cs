@@ -15,7 +15,7 @@ namespace Darker.Common.Tests.Services.Dates
         }
 
         [Test]
-        public void SingletonIsUnique()
+        public void SingletonIsSameInstance()
         {
             Assert.AreEqual(UtcDateService.Instance,_service);
         }
