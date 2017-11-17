@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace Darker.Common.Tests.Services.Dates
+namespace Darker.Common.Tests
 {
     [TestFixture]
     internal class UtcDateServiceTests

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Darker.Common
+namespace Darker
 {
     public class UtcDateService : IDateService
     {

@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using NUnit.Framework;
 
-namespace Darker.Common.Tests.Services.Cultures
+namespace Darker.Common.Tests
 {
     [TestFixture]
     public class CultureServiceTests

@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace Darker.Common
+namespace Darker
 {
     public class ConstantCultureService : ICultureService
     {
