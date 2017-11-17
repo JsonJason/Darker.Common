@@ -2,6 +2,9 @@
 
 namespace Darker
 {
+    /// <summary>
+    /// A wrapper for a manually provided date and time for a <see cref="Darker.IDateService"/>
+    /// </summary>
     public class ConstantDateService : IDateService
     {
         public ConstantDateService(DateTime date, DateTime time)

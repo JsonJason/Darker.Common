@@ -8,9 +8,22 @@ namespace Darker
     public static class EnumerableExtensions
     {
         /// <summary>
-        ///     Converts an enumerable into a string in the format: <c>'[A,B,C]'</c>
+        ///     Converts an enumerable into a string in the format: <c>"[A,B,C]"</c>
         /// </summary>
         /// <param name="source">Enumeration collection source</param>
+        /// <example>
+        /// This example returns the output string <c>"[Tom,Mary,Judy]"</c>
+        /// <code>
+        /// var list = new List&lt;string&gt;();
+        /// list.Add("Tom");
+        /// list.Add("Mary");
+        /// list.Add("Judy");
+        /// 
+        /// string items = list.ToDisplayString();
+        /// 
+        /// 
+        /// </code>
+        /// </example>
         /// <returns>Formatted String</returns>
         public static string ToDisplayString(this IEnumerable source)
         {
@@ -37,8 +50,15 @@ namespace Darker
         /// <summary>
         ///     Filters an Enumerable collection by the class or interface subtype
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <typeparam name="TFilter">The type of the t filter.</typeparam>
+        /// <example>
+        /// This example show how to filter a typed collection by a subtype
+        /// <code>
+        ///    var animals = new List&lt;Animal&gt;();
+        ///    var dogs = animals.FilterByType&lt;Animal,Dog&gt;();
+        /// </code>
+        /// </example>
+        /// <typeparam name="T">The collection type e.g <c>Animals</c></typeparam>
+        /// <typeparam name="TFilter">The type of the t filter. e.g <c>Dog</c></typeparam>
         /// <param name="source">The source.</param>
         /// <returns>IEnumerable of the filtered type</returns>
         public static IEnumerable<TFilter> FilterByType<T, TFilter>(this IEnumerable<T> source)
@@ -51,8 +71,16 @@ namespace Darker
         /// <summary>
         ///     Filters an Enumerable collection by the class or interface subtype
         /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="filterType"></param>
+        /// <example>
+        /// This example show how to filter a typed collection by a subtype
+        /// <code>
+        ///    var animals = new List&lt;Animal&gt;();
+        ///    var dogs = animals.FilterByType&lt;Animal&gt;(typeof(Dog));
+        /// </code>
+        /// </example>
+        /// <typeparam name="T">The collection type e.g <c>Animals</c></typeparam>
+        /// <param name="source">The source list of <typeparamref name="T"/> e.g <c>Animals</c></param>
+        /// <param name="filterType">The type to filter by e.g <c>Dog</c></param>
         /// <returns>IEnumerable of the filtered type</returns>
         public static IEnumerable<T> FilterByType<T>(this IEnumerable<T> source, Type filterType)
             where T : class
