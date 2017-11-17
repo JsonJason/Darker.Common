@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Extensions\EnumerableExtensionsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Cultures\ConstantCultureServiceTests.cs" />
+    <Compile Include="Services\Cultures\CultureServiceTests.cs" />
     <Compile Include="Services\Dates\ConstantDateServiceTests.cs" />
     <Compile Include="Services\Dates\UtcDateServiceTests.cs" />
   </ItemGroup>

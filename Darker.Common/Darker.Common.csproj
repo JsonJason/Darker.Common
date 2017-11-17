@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\Culture\ConstantCultureService.cs" />
+    <Compile Include="Services\Culture\CultureService.cs" />
+    <Compile Include="Services\Culture\ICultureService.cs" />
     <Compile Include="Services\Dates\ConstantDateService.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Services\Dates\IDateService.cs" />
