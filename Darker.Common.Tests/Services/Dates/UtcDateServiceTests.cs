@@ -17,7 +17,8 @@ namespace Darker.Common.Tests
         [Test]
         public void CurrentDateIsUtcNow()
         {
-            Assert.AreEqual(DateTime.UtcNow, _service.CurrentDate);
+            var difference = DateTime.UtcNow - _service.CurrentDate;
+            Assert.IsTrue(difference.Seconds < 10);
         }
 
         [Test]
