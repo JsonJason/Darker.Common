@@ -59,6 +59,8 @@
     <Compile Include="Services\Cultures\CultureServiceTests.cs" />
     <Compile Include="Services\Dates\ConstantDateServiceTests.cs" />
     <Compile Include="Services\Dates\UtcDateServiceTests.cs" />
+    <Compile Include="Services\States\StateMachineTests.cs" />
+    <Compile Include="Services\States\TransitioningStateMachineTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

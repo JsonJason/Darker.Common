@@ -48,6 +48,9 @@
     <Compile Include="Services\Dates\IDateService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Dates\UtcDateService.cs" />
+    <Compile Include="Services\States\StateMachine.cs" />
+    <Compile Include="Services\States\TransitioningStateMachine.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
