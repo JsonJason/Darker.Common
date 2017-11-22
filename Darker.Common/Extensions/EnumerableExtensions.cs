@@ -12,8 +12,8 @@ namespace Darker
         /// </summary>
         /// <param name="source">Enumeration collection source</param>
         /// <example>
-        /// This example returns the output string <c>"[Tom,Mary,Judy]"</c>
-        /// <code>
+        ///     This example returns the output string <c>"[Tom,Mary,Judy]"</c>
+        ///     <code>
         /// var list = new List&lt;string&gt;();
         /// list.Add("Tom");
         /// list.Add("Mary");
@@ -51,8 +51,8 @@ namespace Darker
         ///     Filters an Enumerable collection by the class or interface subtype
         /// </summary>
         /// <example>
-        /// This example show how to filter a typed collection by a subtype
-        /// <code>
+        ///     This example show how to filter a typed collection by a subtype
+        ///     <code>
         ///    var animals = new List&lt;Animal&gt;();
         ///    var dogs = animals.FilterByType&lt;Animal,Dog&gt;();
         /// </code>
@@ -72,14 +72,14 @@ namespace Darker
         ///     Filters an Enumerable collection by the class or interface subtype
         /// </summary>
         /// <example>
-        /// This example show how to filter a typed collection by a subtype
-        /// <code>
+        ///     This example show how to filter a typed collection by a subtype
+        ///     <code>
         ///    var animals = new List&lt;Animal&gt;();
         ///    var dogs = animals.FilterByType&lt;Animal&gt;(typeof(Dog));
         /// </code>
         /// </example>
         /// <typeparam name="T">The collection type e.g <c>Animals</c></typeparam>
-        /// <param name="source">The source list of <typeparamref name="T"/> e.g <c>Animals</c></param>
+        /// <param name="source">The source list of <typeparamref name="T" /> e.g <c>Animals</c></param>
         /// <param name="filterType">The type to filter by e.g <c>Dog</c></param>
         /// <returns>IEnumerable of the filtered type</returns>
         public static IEnumerable<T> FilterByType<T>(this IEnumerable<T> source, Type filterType)

@@ -6,19 +6,13 @@ namespace Darker.Common.Tests
     [TestFixture]
     public class StateMachineTests
     {
-        private StateMachine _states;
-
         [SetUp]
         public void SetUp()
         {
             _states = new StateMachine();
         }
 
-        [Test]
-        public void StateMachine_Starts_Idle()
-        {
-            Assert.AreEqual(StateMachine.Idle, _states.Current);
-        }
+        private StateMachine _states;
 
         [Test]
         public void Changed_Event_Fires()
@@ -30,7 +24,13 @@ namespace Darker.Common.Tests
                 Assert.AreEqual(StateMachine.Idle, a.Previous);
             };
             _states.Current = newState;
-            Assert.AreEqual(newState,_states.Current);
+            Assert.AreEqual(newState, _states.Current);
+        }
+
+        [Test]
+        public void StateMachine_Starts_Idle()
+        {
+            Assert.AreEqual(StateMachine.Idle, _states.Current);
         }
     }
 }

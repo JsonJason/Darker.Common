@@ -4,6 +4,9 @@ namespace Darker.States
 {
     public class StateMachine
     {
+        public static string Idle = "IDLE";
+        private string _current;
+
         public StateMachine()
         {
             _current = Idle;
@@ -14,15 +17,13 @@ namespace Darker.States
             get => _current;
             set
             {
-                var args = new StateChangedEventArgs(_current,value);
+                var args = new StateChangedEventArgs(_current, value);
                 _current = value;
                 OnChanged(args);
             }
         }
 
-        public event EventHandler<StateChangedEventArgs> Changed; 
-        public static string Idle = "IDLE";
-        private string _current;
+        public event EventHandler<StateChangedEventArgs> Changed;
 
         protected virtual void OnChanged(StateChangedEventArgs e)
         {
@@ -32,13 +33,13 @@ namespace Darker.States
 
     public class StateChangedEventArgs : EventArgs
     {
-        public StateChangedEventArgs(string prevState,string newState)
+        public StateChangedEventArgs(string prevState, string newState)
         {
             Previous = prevState;
             New = newState;
         }
+
         public string Previous { get; }
         public string New { get; }
     }
-
 }

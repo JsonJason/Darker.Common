@@ -38,14 +38,14 @@ namespace Darker.Common.Tests
         public void Registering_Null_Transition_Throws()
         {
             Assert.Throws<NullReferenceException>(
-                ()=>_states.RegisterTransition("SOMESTATE",null));
+                () => _states.RegisterTransition("SOMESTATE", null));
         }
 
         [Test]
         public void StateTransition_Exit_Called_On_Exit()
         {
             var transition = Substitute.For<StateTransition>();
-            _states.RegisterTransition(StateMachine.Idle,transition);
+            _states.RegisterTransition(StateMachine.Idle, transition);
             _states.Current = "New State";
             transition.Received().Exit();
             transition.DidNotReceive().Enter();
@@ -62,8 +62,5 @@ namespace Darker.Common.Tests
             transition.DidNotReceive().Exit();
             transition.Received().Enter();
         }
-
-
-
     }
 }

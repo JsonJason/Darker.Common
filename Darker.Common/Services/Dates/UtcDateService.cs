@@ -3,7 +3,7 @@
 namespace Darker
 {
     /// <summary>
-    /// A <see cref="Darker.IDateService"/> that provides the standard <see cref="DateTime"/> UtcNow
+    ///     A <see cref="Darker.IDateService" /> that provides the standard <see cref="DateTime" /> UtcNow
     /// </summary>
     public class UtcDateService : IDateService
     {
@@ -14,7 +14,7 @@ namespace Darker
         }
 
         /// <summary>
-        /// Singleton instance
+        ///     Singleton instance
         /// </summary>
         public static UtcDateService Instance => _instance ?? (_instance = new UtcDateService());
 

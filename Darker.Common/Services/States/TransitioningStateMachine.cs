@@ -14,8 +14,9 @@ namespace Darker.States
 
         public void RegisterTransition(string state, StateTransition transition)
         {
-            if(transition == null) throw new NullReferenceException($"Cannot register null transition for state: {state}");
-            _transitions.Add(state,transition);
+            if (transition == null)
+                throw new NullReferenceException($"Cannot register null transition for state: {state}");
+            _transitions.Add(state, transition);
         }
 
         protected override void OnChanged(StateChangedEventArgs e)
@@ -36,9 +37,13 @@ namespace Darker.States
 
         public static EmptyStateTransition Instance => _instance ?? (_instance = new EmptyStateTransition());
 
-        public void Enter() { }
-        
-        public void Exit() { }
+        public void Enter()
+        {
+        }
+
+        public void Exit()
+        {
+        }
     }
 
     public interface StateTransition
